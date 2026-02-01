@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="description" content="Masajes terapéuticos y relajantes en Montevideo. Atención personalizada, bienestar integral y ambiente profesional. Reservá tu sesión.">
+
+  <meta name="keywords" content="masajes, spa, masajes montevideo, bienestar, relajación, masajista profesional">
+
+  <meta name="author" content="Eduardo Masajes, eduardo, eduardomasajes, masajes eduardo">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Panel Admin | Eduardo Masajes</title>
+  <link rel="stylesheet" href="../admin.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Panel de Servicios</h1>
+
+    <button id="logout" class="secondary">Cerrar sesión</button>
+
+    <div class="card">
+      <h2>Agregar nuevo servicio</h2>
+
+      <form id="form-servicio">
+        <input id="nombreInput" placeholder="Nombre del masaje" required>
+        <input id="duracion" placeholder="Duración (ej: 60 min)" required>
+        <input id="precioInput" type="number" placeholder="Precio" required>
+        <textarea id="descripcionInput" placeholder="Descripción del masaje"></textarea>
+        <input id="imagenInput" type="file" required>
+
+        <button type="submit">Agregar servicio</button>
+      </form>
+    </div>
+
+    <div id="productos-admin"></div>
+
+    <div class="section-divider" data-animate></div>    
+
+  <section class="admin-section">
+
+    <h2>Tienda de productos</h2>
+
+    <form id="form-tienda" class="admin-form">
+      <input type="text" id="tienda-nombre" placeholder="Nombre del producto" required>
+
+      <input type="number" id="tienda-precio" placeholder="Precio">
+
+      <textarea id="tienda-descripcion" placeholder="Descripción"></textarea>
+
+      <input type="file" id="tienda-imagen" accept="image/*" required>
+
+      <button type="submit">Agregar producto</button>
+    </form>
+
+    <hr>
+
+    <div id="tienda-admin-list"></div>
+  </section>
+
+    <div class="section-divider" data-animate></div>
+
+
+    <h2>Notas / Blog</h2>
+
+    <form id="form-post">
+      <input id="post-titulo" placeholder="Título">
+      <textarea id="post-contenido" placeholder="Contenido"></textarea>
+      <input type="file" id="post-imagen">
+      <button>Publicar nota</button>
+    </form>
+
+    <div id="posts-admin"></div>
+
+  </div>
+
+  <script type="module" src="../js/admin.js"></script>
+</body>
+</html>
+
+
